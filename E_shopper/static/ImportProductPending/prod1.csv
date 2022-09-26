@@ -1,0 +1,6 @@
+p_id,p_name,p_img,p_price,product_stock,unit,reorder_level,category,vendor,discount,gst
+1,Apple Laptop Charger,https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwbGUlMjBsYXB0b3B8ZW58MHx8MHx8&w=1000&q=80,5000,100,each,5,Electronics,Apple vendor,0,1
+2,Vivo Phone Charger,https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwbGUlMjBsYXB0b3B8ZW58MHx8MHx8&w=1000&q=80,2000,100,each,7,Electronics,Vivo vendor,Laptop offer -->200.0,3
+3,Men Shirt,https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwbGUlMjBsYXB0b3B8ZW58MHx8MHx8&w=1000&q=80,599,20,each,3,Clothing,Anouk Vendor,0,3
+4,Vivo Phone,https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwbGUlMjBsYXB0b3B8ZW58MHx8MHx8&w=1000&q=80,20000,1000,each,5,Electronics,Vivo vendor,Laptop offer -->200.0,1
+5,Dress,https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwbGUlMjBsYXB0b3B8ZW58MHx8MHx8&w=1000&q=80,599,1000,each,3,Clothing,Anouk Vendor,0,3
