@@ -33,3 +33,5 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ['reorder_level','p_name','category','vendor']
     search_fields = ['p_id','p_name','category','p_price','vendor','product_stock','unit','reorder_level','discount','gst']
 # admin.site.register(Product, ProductAdmin)
+
+

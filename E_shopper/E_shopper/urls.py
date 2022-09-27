@@ -6,6 +6,9 @@ from Vendor.views import VendorModelViewSet
 # from Vendor.views import VendorModelViewSet, PurchaseOrderModelViewSet
 from django.conf import settings
 from django.conf.urls.static import static
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from Report.views import PurchaseOrderModelViewSet, PurchaseOrderDetailsModelViewSet
+
 
 # for CategoryModelViewSet
 router1 = DefaultRouter()
@@ -28,8 +31,12 @@ router5 = DefaultRouter()
 router5.register('', VendorModelViewSet)
 
 # for PurchaseOrderModelViewSet
-# router6 = DefaultRouter()
-# router6.register('', PurchaseOrderModelViewSet)
+router6 = DefaultRouter()
+router6.register('', PurchaseOrderModelViewSet)
+
+# for PurchaseOrderDetailsModelViewSet
+router7 = DefaultRouter()
+router7.register('', PurchaseOrderDetailsModelViewSet)
 
 # for ExcelFileUploadModelViewSet
 # router7 = DefaultRouter()
@@ -44,8 +51,14 @@ urlpatterns = [
     path('product/', include(router4.urls)),
 
     path('vendor/', include(router5.urls)),
-    # path('purchaseorder/', include(router6.urls)),
+
+    path('purchaseorder/', include(router6.urls)),
+    path('purchaseorder_details/', include(router7.urls)),
 
     # path('ExportImportExcel/', include(router7.urls)),
-    path('import_export/', include('Inventory.urls')),
+    path('importexporturl/', include('Inventory.urls')),
+
+    #JWT Authentication urls
+    path('api/token/', TokenObtainPairView.as_view(), name ='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name ='token_refresh'),
 ]  +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -16,7 +16,7 @@ class VendorAdmin(admin.ModelAdmin):
 
 # @admin.register(PurchaseOrder)
 # class PurchaseOrderAdmin(admin.ModelAdmin):
-    # list_display = ['po_id', 'vender_id', 'p_id']
-    # list_filter = ['po_id', 'vender_id', 'p_id']
-    # search_fields = ['po_id', 'vender_id', 'p_id']
+#     list_display = ['po_id', 'vender_id', 'p_id']
+#     list_filter = ['po_id', 'vender_id', 'p_id']
+#     search_fields = ['po_id', 'vender_id', 'p_id']
 

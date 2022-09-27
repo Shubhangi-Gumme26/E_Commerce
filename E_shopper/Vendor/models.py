@@ -1,6 +1,8 @@
 from django.db import models
 from django.db.models import CASCADE
+# from .utility import *
 # from E_shopper.Inventory import Product  # error
+
 
 # Create your models here.
 class Vendor(models.Model):

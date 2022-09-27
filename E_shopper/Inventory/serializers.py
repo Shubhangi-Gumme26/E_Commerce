@@ -9,6 +9,9 @@ class CategorySerializer(serializers.ModelSerializer):
         model = Category
         fields = '__all__'
         fields = ['cat_id', 'cat_name', 'cat_desc', 'category_product_rel', 'category_gst_rel']
+    def create(self, validated_data):
+        return Category.objects.create(**validated_data)
+
 
 class GSTSerializer(serializers.ModelSerializer):
     gst_product_rel = serializers.StringRelatedField(many=True, read_only=True)
@@ -16,6 +19,9 @@ class GSTSerializer(serializers.ModelSerializer):
         model = GST
         # fields = '__all__'
         fields = ['gst_id', 'category', 'igst', 'hsn_code', 'gst_product_rel']
+    def create(self, validated_data):
+        return GST.objects.create(**validated_data)
+
 
 import datetime
 class DiscountSerializer(serializers.ModelSerializer):
@@ -24,6 +30,8 @@ class DiscountSerializer(serializers.ModelSerializer):
         model = Discount
         # fields = '__all__'
         fields = ['discount_id', 'product_name', 'desc', 'discount', 'start_date', 'end_date', 'discount_product_rel']
+    def create(self, validated_data):
+        return Discount.objects.create(**validated_data)
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -31,6 +39,8 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         # fields = '__all__'
         fields = ['p_id', 'p_name', 'category', 'p_img', 'p_price', 'vendor', 'product_stock', 'unit', 'reorder_level', 'discount', 'gst', 'datetime']
+    def create(self, validated_data):
+        return Product.objects.create(**validated_data)
 
     #logoc for check product_stock <= reorder_level
     def validate(self, data):
@@ -45,7 +55,6 @@ class ProductSerializer(serializers.ModelSerializer):
         elif remain_stock == 0:
             raise serializers.ValidationError(f"No product available")
         return data
-
 
 
 

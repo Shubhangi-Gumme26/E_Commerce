@@ -1,0 +1,5 @@
+p_id,p_name,category,p_img,p_price,vendor,product_stock,unit,reorder_level,discount,gst,datetime
+1,Apple Laptop,1,,20000,1,100.0,each,5.0,1,1,2022-09-26T21:03:28.755961Z
+2,vivo phone,1,/media/product/phone.jpg,10000,3,1000.0,each,10.0,2,1,2022-09-26T21:04:05.728439Z
+3,milk,3,,10000,4,50.0,each,5.0,3,3,2022-09-26T21:04:31.593665Z
+4,women dress,2,,1200,2,500.0,each,15.0,3,2,2022-09-26T21:05:13.335343Z
