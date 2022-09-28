@@ -1,7 +1,5 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from rest_framework_simplejwt.authentication import JWTAuthentication
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .serializers import CategorySerializer, GSTSerializer, DiscountSerializer, ProductSerializer, ExcelFileUploadSerializer
 from .models import Category, GST, Discount, Product
 from rest_framework.filters import SearchFilter,OrderingFilter
@@ -13,29 +11,24 @@ from datetime import datetime
 class CategoryModelViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    # permission_classes = [IsAuthenticatedOrReadOnly]
-    authentication_classes = [JWTAuthentication]
+
 
 
 class GSTModelViewSet(viewsets.ModelViewSet):
     queryset = GST.objects.all()
     serializer_class = GSTSerializer
-    # permission_classes = [IsAuthenticatedOrReadOnly]
-    authentication_classes = [JWTAuthentication]
+
 
 
 class DiscountModelViewSet(viewsets.ModelViewSet):
     queryset = Discount.objects.all()
     serializer_class = DiscountSerializer
-    # permission_classes = [IsAuthenticatedOrReadOnly]
-    # authentication_classes = [JWTAuthentication]
+
 
 
 class ProductModelViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    # permission_classes = [IsAuthenticatedOrReadOnly]
-    authentication_classes = [JWTAuthentication]
     filter_backends = [SearchFilter]
     search_fields = ['p_name']
     pagination_class = PageNumberPagination

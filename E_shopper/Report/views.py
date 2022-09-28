@@ -19,8 +19,7 @@ import os
 class PurchaseOrderModelViewSet(viewsets.ModelViewSet):
     queryset = PurchaseOrder.objects.all()
     serializer_class = PurchaseOrderSerializer
-    # permission_classes = [IsAuthenticatedOrReadOnly]
-    # authentication_classes = [JWTAuthentication]
+
     def list(self, request):
         todays_date = datetime.date.today()                           # today date
         weekly = todays_date - datetime.timedelta(days=7)            # weekly date = 28-7=21
@@ -122,5 +121,3 @@ class PurchaseOrderModelViewSet(viewsets.ModelViewSet):
 class PurchaseOrderDetailsModelViewSet(viewsets.ModelViewSet):
     queryset = PurchaseOrderDetails.objects.all()
     serializer_class = PurchaseOrderDetailsSerializer
-    # permission_classes = [IsAuthenticatedOrReadOnly]
-    # authentication_classes = [JWTAuthentication]
