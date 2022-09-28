@@ -4,9 +4,9 @@ from Report.models import PurchaseOrderDetails, PurchaseOrder
 # Register your models here.
 @admin.register(PurchaseOrder)
 class PurchaseOrderAdmin(admin.ModelAdmin):
-    list_display = ['po_id', 'vendor', 'product', 'total_amount', 'datettime']
-    list_filter = ['po_id', 'vendor', 'product', 'total_amount', 'datettime']
-    search_fields = ['po_id', 'vendor', 'product', 'total_amount', 'datettime']
+    list_display = ['po_id', 'vendor', 'product', 'total_amount', 'date']
+    list_filter = ['po_id', 'vendor', 'product', 'total_amount', 'date']
+    search_fields = ['po_id', 'vendor', 'product', 'total_amount', 'date']
 # admin.site.register(PurchaseOrder, PurchaseOrderAdmin)
 
 

@@ -13,6 +13,7 @@ class PurchaseOrderSerializer(serializers.ModelSerializer):
         return PurchaseOrder.objects.create(**validated_data)
 
 
+
 class PurchaseOrderDetailsSerializer(serializers.ModelSerializer):
     vendor_purdetails_rel = VendorSerializer(read_only=True)
     purchesorder_purdetails_rel = PurchaseOrderSerializer(read_only=True)

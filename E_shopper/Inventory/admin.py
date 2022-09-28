@@ -29,7 +29,7 @@ class DiscountAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['p_id','p_name','category','gst','reorder_level','vendor','unit','p_price','product_stock','discount', 'datetime']
+    list_display = ['p_id','p_name','category','gst','reorder_level','vendor','unit','p_price','product_stock','discount', 'date']
     list_filter = ['reorder_level','p_name','category','vendor']
     search_fields = ['p_id','p_name','category','p_price','vendor','product_stock','unit','reorder_level','discount','gst']
 # admin.site.register(Product, ProductAdmin)

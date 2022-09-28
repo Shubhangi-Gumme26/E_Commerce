@@ -12,7 +12,7 @@ class PurchaseOrder(models.Model):
     vendor = models.ForeignKey(Vendor, on_delete=CASCADE, related_name='vendor_purchesorder_rel')
     product = models.ForeignKey(Product, on_delete=CASCADE, related_name='purchesorder_purdetails_rel')
     total_amount = models.FloatField(default=200000)
-    datettime = models.DateField(auto_now=True)
+    date = models.DateField()
     def __str__(self):
         return f"Purches Order:{self.po_id}--- Product:{self.product}"
 
